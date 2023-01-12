@@ -1,5 +1,5 @@
 # gum_recipe
-Official txAdmin recipe for gum_framework.
+Official txAdmin recipe for Gum Framework.
 
 
 # SETUP
