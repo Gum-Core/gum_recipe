@@ -41,7 +41,7 @@ tasks:
     ref: main
     dest: ./resources/[gum_framework]/
 
-    - action: download_github
+  - action: download_github
     src: https://github.com/Gum-Core/gum_weapons
     ref: main
     dest: ./resources/[gum_framework]/
