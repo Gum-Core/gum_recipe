@@ -4,8 +4,6 @@ version: 1.0.1
 author: Gum
 description: A new complete and fresh framework for RedM, enjoy now and join us in this new adventure
 
-
-
 tasks:
   # Download default CFX resources
   - action: download_github
@@ -25,6 +23,10 @@ tasks:
     src: ./tmp/gum_framework/server.cfg
     dest: ./server.cfg
 
+  - action: move_path
+    src: ./tmp/gum_framework/gumlogo.png
+    dest: ./gumlogo.png
+
   - action: connect_database
   - action: query_database
     file: ./tmp/gum_framework/GumFramework.sql
@@ -34,92 +36,96 @@ tasks:
   - action: download_github
     src: https://github.com/Gum-Core/gum_core
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_core
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_inventory
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_inventory
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_weapons
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_weapons
 
   - action: download_github
     src: https://github.com/Gum-Core/spawnmanager
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/spawnmanager
   
   - action: download_github
     src: https://github.com/Gum-Core/gum_status2
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_status2
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_notify
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_notify
   
   - action: download_github
     src: https://github.com/Gum-Core/gum_metabolism
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_metabolism
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_clothingstore
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_clothingstore
   
   - action: download_github
     src: https://github.com/Gum-Core/gum_barberstore
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_barberstore
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_bank_new
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_bank_new
   
   - action: download_github
     src: https://github.com/Gum-Core/gum_adminmenu_nui
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_adminmenu_nui
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_adminmenu
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_adminmenu
   
   - action: download_github
     src: https://github.com/Gum-Core/gum_menu
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_menu
 
   - action: download_github
     src: https://github.com/Gum-Core/uiprompt
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/uiprompt
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_character
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_character
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_inputs
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_inputs
 
   - action: download_github
     src: https://github.com/Gum-Core/gum_creator
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/gum_creator
 
   - action: download_github
     src: https://github.com/Gum-Core/ghmattimysql
     ref: main
-    dest: ./resources/[gum_framework]/
+    dest: ./resources/[gum_framework]/ghmattimysql
 
   - action: remove_path
     path: ./resources/[cfx-default]/[managers]/spawnmanager
+
+  ## Clean tmp path
+  - action: remove_path
+    path: ./tmp
